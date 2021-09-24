@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "private": "true",
+  "scripts": {
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css",
+    "build": "esbuild app/javascript/*.* --bundle --outdir=app/assets/builds"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.3.5",
+    "esbuild": "^0.13.2",
+    "postcss": "^8.3.7",
+    "tailwindcss": "^2.2.15"
+  }
+}
