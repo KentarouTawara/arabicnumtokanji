@@ -1,0 +1,12 @@
+<h1>漢数字<=>アラビア数字変換くん</h1>
+
+<%= form_with model: @conversion, url: conversions_path do |f| %>
+  <div class="field">
+    <%= f.label :input %>
+    <%= f.text_field :input %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
