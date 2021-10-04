@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'comments/create'
-
   root 'conversions#new'
-  resources :conversions
+  resources :conversions do
+    resources :comments, shallow: true
+  end
 end

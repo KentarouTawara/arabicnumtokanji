@@ -1,2 +1,33 @@
 <%= @conversion.input %>
 <%= @conversion.output %>
+
+<%= render  "comments/form", {comment: @comment, conversion: @conversion} %>
+<!--<%= render  "comments/comments", {comments: @comments} %> -->
+
+<div data-controller="hello">
+  <input data-hello-target="name" type="text">
+
+  <button data-action="click->hello#greet">
+    Greet
+  </button>
+
+  <turbo-stream action="after" target="comment">
+    <template>
+      Content to place after the element designated with the dom_id.
+      <p data-hello-target="output">
+    </template>
+  </turbo-stream>
+
+  <div id = comment>
+  </div>
+</div>
+
+<turbo-frame id="messages">
+  <a href="/messages/expanded">
+    Show all expanded messages in this frame.
+  </a>
+
+  <form action="/messages">
+    Show response from this form within this frame.
+  </form>
+</turbo-frame>
