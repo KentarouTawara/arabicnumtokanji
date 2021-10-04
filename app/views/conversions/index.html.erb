@@ -1,0 +1,7 @@
+<h1>結果一覧</h1>
+
+<% if @conversions.present? %>
+  <%= render  @conversions %>
+<% else %>
+  <h1>"結果は１件もありません"</h1>
+<% end %>
